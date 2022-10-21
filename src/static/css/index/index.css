@@ -1,3 +1,52 @@
+.drawbackgound-color {
+  background-color: #e8dcd9;
+}
+
+.test {
+  background-color: red;
+}
+
 #video {
-  border: 5px solid red;
+}
+
+#canvas {
+}
+
+.boxsize {
+  height: 50px;
+}
+
+.btn {
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.margin-bot {
+  margin-bottom: 100px;
+}
+
+.comment-title {
+  font-size: 1.7rem;
+  line-height: 1.4em;
+  font-weight: 600;
+}
+
+.positive {
+  color: #5f911c;
+}
+
+.negative {
+  color: #bc280b;
+}
+
+.comment-simbol {
+  font-size: 2.3rem;
+  line-height: 1.4em;
+  font-weight: 700;
+  padding-right: 0.5em;
+}
+
+.comment-context {
+  font-size: 1.2rem;
+  padding-left: 3rem;
 }

@@ -2,7 +2,7 @@ let video = document.getElementById("video");
 
 function getMedia() {
   let contraints = {
-    video: { width: 500, height: 500 },
+    video: { width: 640, height: 360 },
     audio: false,
   };
 
@@ -20,7 +20,7 @@ function getMedia() {
 function takePhoto() {
   let canvas = document.getElementById("canvas");
   let ctx = canvas.getContext("2d");
-  ctx.drawImage(video, 0, 0, 500, 500);
+  ctx.drawImage(video, 0, 0, 640, 360);
   console.log(video);
 }
 

@@ -1,12 +1,25 @@
-FROM 3.10.8-alpine3.15
+FROM python:3.10.8-bullseye
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+# RUN apt-get update && apt-get install -y \
+#     zip \
+#     tree \
+#     vim \
+#     unzip \
+#     git \
+#     crul
 
-RUN pip3 install -r requirements.txt
+COPY ./requirements.txt /app/requirements.txt
 
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY . /app
 
-CMD ["python3", "-m" , "flask", "run", "-host=0.0.0.0"]
+USER root
+
+EXPOSE 8080
+
+ENTRYPOINT [ "python" ]
+
+CMD ["app.py"]

@@ -1,1 +1,6 @@
 flask
+
+
+#AI
+tensorflow
+numpy

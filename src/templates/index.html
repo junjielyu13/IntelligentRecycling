@@ -35,25 +35,6 @@
 <body>
 
 	<header id="header" id="home">
-		<div class="header-top">
-			<div class="container">
-				<div class="row justify-content-end">
-					<div class="col-lg-6 col-sm-4 col-8 header-top-right no-padding">
-						<ul>
-							<li>
-								Mon-Fri: 8am to 2pm
-							</li>
-							<li>
-								Sat-Sun: 11am to 4pm
-							</li>
-							<li>
-								<a href="tel:(012) 6985 236 7512">(012) 6985 236 7512</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
@@ -63,15 +44,9 @@
 					<ul class="nav-menu">
 						<li class="menu-active"><a href="index.html#home">Home</a></li>
 						<li><a href="index.html#about">About</a></li>
-						<li><a href="index.html#coffee">Coffee</a></li>
+						<li><a href="index.html#coffee">AI</a></li>
 						<li><a href="index.html#review">Review</a></li>
 						<li><a href="index.html#blog">Blog</a></li>
-						<li class="menu-has-children"><a href="">Pages</a>
-							<ul>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-							</ul>
-						</li>
 					</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
@@ -96,67 +71,97 @@
 	<div class="main-wrapper">
 
 		<!-- Start video-sec Area -->
-		<section class="video-sec-area pt-100" id="about">
-			<div class="container">
-				<div class="row justify-content-start align-items-center">
+		<section class="pt-100 margin-bot">
+
+					<div class=" text-center">
+						
+							<button type="button" class="btn btn-primary btn-lg" title="camara" onclick="getMedia()">Open Camara</button>
 
 
+							<button type="button" class="btn btn-primary btn-lg" id="snap" onclick="takePhoto()">Get photo</button>
 
-					<div class="col-lg-5 justify-content-center align-items-center d-flex">
-						<div>
-							<video  class="img-fluid" id="video" autoplay="autoplay"></video>
-						</div>
 
-					</div>
-
-					<div class="col-lg-2 justify-content-center align-items-center">
-						<input type="button" title="camara" value="camara" onclick="getMedia()" />
-						<button id="snap" onclick="takePhoto()">take phone</button>
+							<button type="button" class="btn btn-primary btn-lg" id="btnsavaImg" onClick="Download()">Identify photo</button>	
+						
 					</div>
 
 
-					<div class="col-lg-5 video-left">
-						<canvas id="canvas" width="500px" height="500px"></canvas>
+			<div class=" text-center">
+
+				  <div class="row align-items-start">
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+						<video  id="video" class="drawbackgound-color" width="640px" height="360px"></video>
 					</div>
 
-
-
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 boxsize"></div>
+					
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+						<canvas id="canvas" class="drawbackgound-color" width="640px" height="360px"></canvas>
+					</div>
 				</div>
+
 			</div>
+
 		</section>
+
 		<!-- End video-sec Area -->
 
 		<!-- Start Generic Area -->
-		<section class="about-generic-area section-gap">
-			<div class="container border-top-generic">
-				<h3 class="about-title mb-30">descript</h3>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="img-text">
-							<img src="img/a.jpg" alt="" class="img-fluid float-left mr-20 mb-20">
-							<p>descript</p>
+		<section class="section-gap">
+			<div class="container text-center">
+
+				<div class="row align-items-start"></div>
+
+					<div class="col">
+						<img src="../static/upload/contenidor_blau.png" alt="">
+					</div>
+
+					<div class="col">
+
+						<div class="container text-center">
+
+							<h3 class="mb-30">CONTENEDOR AMARILLO - ENVASES</h3>
+
+							<div class="row">
+								<div class="col-md-12">
+									<i class="fa fa-check comment-simbol positive" aria-hidden="true"></i>
+									<span class="comment-title positive">Què s’hi pot llençar:</span>
+								</div>
+
+								<div class="col-lg-12">
+									<p class="comment-context">envasos de plàstic, llaunes de begudes i conserves, brics, xapes i tapes de metall, paper d’alumini i film transparent, safates de porexpan, etc.</p>
+								</div>
+
+								<div class="col-lg-12">
+									<i class="fa fa-times comment-simbol negative" aria-hidden="true"></i>
+									<span class="comment-title negative">Què no s’hi pot llençar:</span>
+								</div>
+
+								<div class="col-md-12">
+									<p class="comment-context">joguines, mànegues de regar, tubs, materials com cintes de vídeo i CDs, i envasos de productes perillosos (dissolvents o pintures), etc.</p>
+								</div>
+
+								<div class="col-md-12">
+									<p class="comment-context">Els envasos es porten a les plantes de triatge, on se separen els diferents materials mitjançant la combinació de tècniques òptiques, mecàniques i manuals. Els diversos materials seleccionats són compactats, embalats i distribuïts als centres de triatge.</p>
+								</div>
+								
+
+							</div>
 						</div>
+
 					</div>
-					<div class="col-lg-12">
-						<p>descrpit</p>
-					</div>
-					<div class="col-lg-12">
-						<p>descript</p>
-					</div>
-					<div class="col-md-12">
-						<div class="img-text">
-							<img src="img/a2.jpg" alt="" class="img-fluid float-left mr-20 mb-20">
-							<p>descorit</p>
-						</div>
-					</div>
+
 				</div>
+							
 			</div>
+			
+		
 		</section>
 		<!-- End Generic Start -->
 
 
 
-		<script src="../static/js/index/index.js"></script>
+		Z<script src="../static/js/index/index.js"></script>
 
 
 		<script src="../static/js/vendor/jquery-2.2.4.min.js"></script>

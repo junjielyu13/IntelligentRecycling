@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INDEX</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css" />
+  </head>
+
+  <body>
+    <input type="button" title="c amara" value="camara" onclick="getMedia()" />
+    <video id="video" width="500px" height="500px" autoplay="autoplay"></video>
+    <canvas id="canvas" width="500px" height="500px"></canvas>
+    <button id="snap" onclick="takePhoto()">take phone</button>
+
+    <div>
+      <input type="button" id="btnsavaImg" value="save" onClick="Download()" />
+    </div>
+
+    <script type="text/javascript" src="../static/js/index.js"></script>
+  </body>
+</html>

@@ -6,9 +6,8 @@ from src.main.model_prediction import *
 import getpass
 
 
-app = Flask(__name__, template_folder="../templates",
-            static_folder='../static')
-# CORS(app, resources=r'/*')
+app = Flask(__name__, template_folder="../templates",  static_folder='../static')
+CORS(app, resources=r'/*')
 
 
 @app.route("/")

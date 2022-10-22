@@ -32,6 +32,10 @@ flask app run
 
 Then you can identify wastes through our website
 
+## Video Source:
+
+[Youtube Video](https://www.youtube.com/watch?v=6UeTWyYHZlQ)
+
 ## Screenshots
 
 ### Cover:
@@ -51,3 +55,5 @@ Then you can identify wastes through our website
 ## Description of bin
 
 ![Full screen](./demo/fullscreen.jpg)
+
+---

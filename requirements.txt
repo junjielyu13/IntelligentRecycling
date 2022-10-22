@@ -4,3 +4,4 @@ flask_cors
 #AI
 tensorflow
 numpy
+scikit-images

@@ -1,10 +1,17 @@
+import matplotlib.pylab as plt
+from skimage import io
 import tensorflow as tf
 from tensorflow.keras.models import load_model
 import numpy as np
 import os
 
-def prediction(image_dir, im_size = 256, class_names=['amarillo', 'azul', 'marron', 'verde']):
-    model = load_model("D:\GitHub\HackForGood_6p\src\main\model.h5")
+
+def prediction(image_dir, im_size=256, class_names=['amarillo', 'azul', 'marron', 'verde']):
+
+    aboslut_path = os.getcwd()
+    relative_path = "\src\main\model.h5"
+    model_path = aboslut_path + relative_path
+    model = load_model(model_path)
     sunflower_path = image_dir
 
     img = tf.keras.utils.load_img(
@@ -18,15 +25,13 @@ def prediction(image_dir, im_size = 256, class_names=['amarillo', 'azul', 'marro
     return class_names[np.argmax(score)], 100 * np.max(score)
 
 
-from skimage import io
-import matplotlib.pylab as plt
-
 # if __name__ == "__main__":
 #     #print("D:\GitHub\HackForGood_6p\src\main\model.h5")
-    
-# path = 'C:/Users/Junjie_Li/Downloads/img_2669439960.jpg'
+
+
+path = 'C:/Users/Junjie_Li/Downloads/img_2669439960.jpg'
 #     im_dim = 224
-#     #contenedor_value, accuracy = 
+#     #contenedor_value, accuracy =
 #     # print(
 #     #     "This image most likely belongs to {} with a {:.2f} percent confidence."
 #     #     .format(contenedor_value, accuracy)
@@ -35,4 +40,4 @@ import matplotlib.pylab as plt
 #     # plt.imshow(ig)
 #     # plt.show()
 
-# print(prediction(path, im_size = 224)) #('amarillo', 89.77444171905518)
+print(prediction(path, im_size=224))  # ('amarillo', 89.77444171905518)

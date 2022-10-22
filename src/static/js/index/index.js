@@ -33,6 +33,7 @@ function Download() {
     var r = type.match(/png|jpeg|bmp|gif/)[0];
     return "image/" + r;
   };
+
   imgdata = imgdata.replace(fixtype(type), "image/octet-stream");
 
   var savaFile = function (data, filename) {
@@ -42,6 +43,9 @@ function Download() {
     );
     save_link.href = data;
     save_link.download = filename;
+
+    console.log(save_link.href);
+
     var event = document.createEvent("MouseEvents");
     event.initMouseEvent(
       "click",
@@ -62,6 +66,29 @@ function Download() {
     );
     save_link.dispatchEvent(event);
   };
-  var filename = "图像_" + new Date().getSeconds() + "." + type;
+
+  var filename = "img_" + new Date().getSeconds() + "." + type;
   savaFile(imgdata, filename);
+
+  function ajaxfunction() {
+    data = $("#form").serialize();
+    $.ajax({
+      type: "POST",
+      url: "/identify/",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      dataType: "json",
+
+      success: function (data) {
+        print("succss!");
+        print(data);
+      },
+
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  }
+
+  ajaxfunction();
 }

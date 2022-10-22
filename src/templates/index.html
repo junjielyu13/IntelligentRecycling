@@ -15,7 +15,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Coffee</title>
+	<title>Reciclado Inteligente</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
@@ -53,13 +53,14 @@
 		</div>
 	</header><!-- #header -->
 
+
 	<section class="generic-banner relative">
 		<div class="container">
 			<div class="row height align-items-center justify-content-center">
 				<div class="col-lg-10">
 					<div class="generic-banner-content">
-						<h2 class="text-white">title</h2>
-						<p class="text-white">descripte</p>
+						<h2 class="text-white">RECICLADO INTELIGENTE</h2>
+						<p class="text-white">Los mecanismos de inteligencia artificial permiten identificar objetos mediante fotografías. Una posible aplicación consiste en proporcionar a los ciudadanos ayudas para saber en qué cubo reciclar cada residuo.</p>
 					</div>
 				</div>
 			</div>
@@ -80,8 +81,10 @@
 
 							<button type="button" class="btn btn-primary btn-lg" id="snap" onclick="takePhoto()">Get photo</button>
 
-
-							<button type="button" class="btn btn-primary btn-lg" id="btnsavaImg" onClick="Download()">Identify photo</button>	
+							<form action="/test" method="post" style="display: inline-block">
+								<input type="text" id="check" name="check" value="check" style="display: none;"><br><br>
+								<input type="submit" value="Identify photo" class="btn btn-primary btn-lg" id="btnsavaImg" onClick="Download()"></input>	
+							</form>
 						
 					</div>
 
@@ -107,7 +110,7 @@
 		<!-- End video-sec Area -->
 
 		<!-- Start Generic Area -->
-		<section class="section-gap">
+		<section class="section-gap" id="bin-info">
 			<div class="container text-center">
 
 				<div class="row align-items-start"></div>
@@ -158,10 +161,8 @@
 		
 		</section>
 		<!-- End Generic Start -->
-
-
-
-		Z<script src="../static/js/index/index.js"></script>
+		
+		<script src="../static/js/index/index.js"></script>
 
 
 		<script src="../static/js/vendor/jquery-2.2.4.min.js"></script>
@@ -185,7 +186,7 @@
 			
 		<script type="text/javascript"
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-
+			
 </body>
 
 </html>

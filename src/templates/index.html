@@ -74,19 +74,19 @@
 		<!-- Start video-sec Area -->
 		<section class="pt-100 margin-bot">
 
-					<div class=" text-center">
+			<div class=" text-center">
 						
-							<button type="button" class="btn btn-primary btn-lg" title="camara" onclick="getMedia()">Open Camara</button>
+				<button type="button" class="btn btn-primary btn-lg" title="camara" onclick="getMedia()">Open Camara</button>
 
 
-							<button type="button" class="btn btn-primary btn-lg" id="snap" onclick="takePhoto()">Get photo</button>
+				<button type="button" class="btn btn-primary btn-lg" id="snap" onclick="takePhoto()">Get photo</button>
 
-							<form action="/test" method="post" style="display: inline-block">
-								<input type="text" id="check" name="check" value="check" style="display: none;"><br><br>
-								<input type="submit" value="Identify photo" class="btn btn-primary btn-lg" id="btnsavaImg" onClick="Download()"></input>	
-							</form>
+				<form action="/identify" method="post" style="display: inline-block">
+					<input type="text" id="check" name="check" value="check" style="display: none;"><br><br>
+					<input type="submit" value="Identify photo" class="btn btn-primary btn-lg" id="btnsavaImg" onClick="Download()">	
+				</form>
 						
-					</div>
+			</div>
 
 
 			<div class=" text-center">
@@ -115,7 +115,7 @@
 
 				<div class="row align-items-start"></div>
 
-					<div class="col">
+					<div class="col" id="info-img">
 						<img src="../static/upload/contenidor_blau.png" alt="">
 					</div>
 
@@ -132,7 +132,7 @@
 								</div>
 
 								<div class="col-lg-12">
-									<p class="comment-context">envasos de plàstic, llaunes de begudes i conserves, brics, xapes i tapes de metall, paper d’alumini i film transparent, safates de porexpan, etc.</p>
+									<p class="comment-context" id="info-1">envasos de plàstic, llaunes de begudes i conserves, brics, xapes i tapes de metall, paper d’alumini i film transparent, safates de porexpan, etc.</p>
 								</div>
 
 								<div class="col-lg-12">
@@ -141,11 +141,11 @@
 								</div>
 
 								<div class="col-md-12">
-									<p class="comment-context">joguines, mànegues de regar, tubs, materials com cintes de vídeo i CDs, i envasos de productes perillosos (dissolvents o pintures), etc.</p>
+									<p class="comment-context" id="info-2">joguines, mànegues de regar, tubs, materials com cintes de vídeo i CDs, i envasos de productes perillosos (dissolvents o pintures), etc.</p>
 								</div>
 
 								<div class="col-md-12">
-									<p class="comment-context">Els envasos es porten a les plantes de triatge, on se separen els diferents materials mitjançant la combinació de tècniques òptiques, mecàniques i manuals. Els diversos materials seleccionats són compactats, embalats i distribuïts als centres de triatge.</p>
+									<p class="comment-context" id="info-3">Els envasos es porten a les plantes de triatge, on se separen els diferents materials mitjançant la combinació de tècniques òptiques, mecàniques i manuals. Els diversos materials seleccionats són compactats, embalats i distribuïts als centres de triatge.</p>
 								</div>
 								
 
@@ -160,6 +160,7 @@
 			
 		
 		</section>
+	</div>
 		<!-- End Generic Start -->
 		
 		<script src="../static/js/index/index.js"></script>

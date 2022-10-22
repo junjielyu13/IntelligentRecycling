@@ -65,29 +65,33 @@ function Download() {
       null
     );
     save_link.dispatchEvent(event);
+
+    ajaxfunction(filename);
   };
 
   var filename = "img_" + new Date().getSeconds() + "." + type;
   savaFile(imgdata, filename);
 
-  function ajaxfunction() {
-    data = $("#form").serialize();
-    $.ajax({
-      type: "POST",
-      url: "/identify/",
-      data: JSON.stringify(data),
-      contentType: "application/json",
-      dataType: "json",
+  function ajaxfunction(filename) {
+    console.log(filename);
 
-      success: function (data) {
-        print("succss!");
-        print(data);
-      },
+    // $.ajax({
+    //   type: "POST",
+    //   url: "/identify",
 
-      error: function (error) {
-        console.log(error);
-      },
-    });
+    //   data: JSON.stringify(filename),
+
+    //   dataType: "json",
+
+    //   success: function (data) {
+    //     print("succss!");
+    //     print(data);
+    //   },
+
+    //   error: function (error) {
+    //     console.log(error);
+    //   },
+    // });
   }
 
   ajaxfunction();

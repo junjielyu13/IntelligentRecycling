@@ -1,4 +1,8 @@
 let video = document.getElementById("video");
+let type = "jpg";
+let result = Math.floor(Math.random() * 99999999);
+
+let filename = "img_" + new Date().getSeconds() + result + "." + type;
 
 function getMedia() {
   let contraints = {
@@ -21,11 +25,9 @@ function takePhoto() {
   let canvas = document.getElementById("canvas");
   let ctx = canvas.getContext("2d");
   ctx.drawImage(video, 0, 0, 640, 360);
-  console.log(video);
 }
 
 function Download() {
-  var type = "jpg";
   var imgdata = canvas.toDataURL(type);
 
   var fixtype = function (type) {
@@ -43,8 +45,6 @@ function Download() {
     );
     save_link.href = data;
     save_link.download = filename;
-
-    console.log(save_link.href);
 
     var event = document.createEvent("MouseEvents");
     event.initMouseEvent(
@@ -65,36 +65,19 @@ function Download() {
       null
     );
     save_link.dispatchEvent(event);
-
-    ajaxfunction(filename);
   };
 
-  var filename = "img_" + new Date().getSeconds() + "." + type;
   savaFile(imgdata, filename);
 
-  function ajaxfunction(filename) {
-    console.log(filename);
+  $.ajax({
+    type: "POST",
 
-    $.ajax({
-      type: "POST",
-      url: "/identify",
+    url: "/identify",
 
-      contentType: "application/json; charset=utf-8",
+    data: { name: filename },
 
-      data: JSON.stringify({ datafilename: filename }),
+    dataType: "json",
 
-      dataType: "json",
-
-      success: function (data) {
-        print("succss!");
-        print(data);
-      },
-
-      error: function (error) {
-        console.log(error);
-      },
-    });
-  }
-
-  ajaxfunction();
+    async: true,
+  });
 }

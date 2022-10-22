@@ -7,9 +7,9 @@ import os
 
 
 def prediction(image_dir, im_size=256, class_names=['amarillo', 'azul', 'marron', 'verde']):
-
+    im_size = 224
     aboslut_path = os.getcwd()
-    relative_path = "\src\main\model.h5"
+    relative_path = "\src\main\model3.h5"
     model_path = aboslut_path + relative_path
     model = load_model(model_path)
     sunflower_path = image_dir

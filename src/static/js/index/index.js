@@ -87,12 +87,15 @@ function Download() {
       console.log(data);
 
       var imgbox = document.querySelector("#info-img");
+      var infor_titile = document.querySelector("#info-title");
       var infor_1 = document.querySelector("#info-1");
       var infor_2 = document.querySelector("#info-2");
       var infor_3 = document.querySelector("#info-3");
 
       if (data.result === "amarillo") {
         imgbox.src = "../static/upload/contenidor_groc.png";
+
+        infor_titile.innerHTML = "CONTENEDOR AMARILLO - ENVASES";
 
         infor_1.innerHTML =
           "envases de plástico, latas de bebidas y conservas, briks, chapas y tapas de metal, papel de aluminio y film transparente, bandejas de porexpán, etc.";
@@ -105,6 +108,8 @@ function Download() {
       } else if (data.result === "azul") {
         imgbox.src = "../static/upload/contenidor_blau.png";
 
+        infor_titile.innerHTML = "CONTENEDOR AZUL -PAPEL Y CARTRÓN";
+
         infor_1.innerHTML =
           "envases y cajas de cartón, periódicos, revistas, libretas sin espiral metálica, sobres, bolsas de papel, folios, papel de regalo, etc.";
 
@@ -115,6 +120,8 @@ function Download() {
           "Los residuos recogidos en el contenedor azul se llevan a las plantas de reciclaje, donde se convierten en grandes balas de papel triturado. Estas balas se ponen a remojo para obtener pasta de papel, que se cuela para filtrar los materiales férricos. La pasta resultante se seca, plancha y se hacen bobinas, que se distribuyen en las fábricas papeleras para tener una nueva vida útil.";
       } else if (data.result === "marron") {
         imgbox.src = "../static/upload/contenidor_marro.png";
+
+        infor_titile.innerHTML = "CONTENEDOR MARRÓN - ORGÁNICA";
 
         infor_1.innerHTML =
           "restos de carne, pescado, pan, fruta, verdura, marisco, cáscaras de huevo y de frutos secos, tapones de corcho, bolsas de infusión, marrón del café, papel de cocina y servilletas manchadas de aceite, restos de jardinería, etc.";
@@ -127,6 +134,8 @@ function Download() {
       } else if (data.result === "verde") {
         imgbox.src = "../static/upload/contenidor_verd.png";
 
+        infor_titile.innerHTML = "CONTENEDOR VERDE - VIDRIO";
+
         infor_1.innerHTML =
           "envases y botellas de vidrio, sin tapones ni tapas.";
 
@@ -137,6 +146,8 @@ function Download() {
           "El vidrio recogido se lleva a la planta de reciclaje, donde se limpia, se extraen los materiales férricos con unos imanes y se tritura hasta convertirlo en polvo (cristal seleccionado, limpio y molido), que permite fabricar envases de vidrio exactamente iguales que los originales para hacer botellas, botes o bombillas, entre otros.";
       } else {
         imgbox.src = "../static/upload/contenidor_gris.png";
+
+        infor_titile.innerHTML = "CONTENEDOR GRIS - DESECHO";
 
         infor_1.innerHTML =
           "colillas, compresas, pañales, restos de barrer, algodón, pelo, bolígrafos y lápices usados, heces de animales.";

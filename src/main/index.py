@@ -37,18 +37,6 @@ def identify():
 
     return jsonify({"result": contenedor_value, "perf": accuracy})
 
-    if contenedor_value == "amarillo":
-        print("test")
-        return redirect("/groc")
-    elif contenedor_value == "azul":
-        return redirect("/blau")
-    elif contenedor_value == "marron":
-        return redirect("/marroc")
-    elif contenedor_value == "verde":
-        return redirect("/verde")
-    else:
-        return redirect("/gris")
-
 
 @app.route("/groc")
 def groc():

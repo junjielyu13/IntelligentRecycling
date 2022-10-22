@@ -2,6 +2,15 @@
   background-color: #e8dcd9;
 }
 
+.text-intro {
+  font-size: 2em;
+  margin-top: 30px;
+}
+
+.present {
+  display: none;
+}
+
 .test {
   background-color: red;
 }

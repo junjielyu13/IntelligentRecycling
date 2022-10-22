@@ -2,14 +2,35 @@
   background-color: #e8dcd9;
 }
 
+.main-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.text-intro {
+  font-size: 2rem;
+}
+
+.nav-menu > li > a {
+  font-size: 18px;
+}
+
+.RI-logo {
+  width: 120px;
+  height: 50px;
+}
+
+.text-intro {
+  font-size: 2em;
+  margin-top: 30px;
+}
+
+.present {
+  display: none;
+}
+
 .test {
   background-color: red;
-}
-
-#video {
-}
-
-#canvas {
 }
 
 .boxsize {

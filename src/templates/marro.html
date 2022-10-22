@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/elements/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Reciclado Inteligente</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="../static/css/linearicons.css">
+	<link rel="stylesheet" href="../static/css/owl.carousel.css">
+	<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../static/css/nice-select.css">
+	<link rel="stylesheet" href="../static/css/magnific-popup.css">
+	<link rel="stylesheet" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" href="../static/css/main.css">
+	
+	<link rel="stylesheet" href="../static/css/index/index.css">
+	
+</head>
+
+<body>
+
+	<header id="header" id="home">
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="../static/img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="index.html#home">Home</a></li>
+						<li><a href="index.html#about">About</a></li>
+						<li><a href="index.html#coffee">AI</a></li>
+						<li><a href="index.html#review">Review</a></li>
+						<li><a href="index.html#blog">Blog</a></li>
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header><!-- #header -->
+
+
+	<section class="generic-banner relative">
+		<div class="container">
+			<div class="row height align-items-center justify-content-center">
+				<div class="col-lg-10">
+					<div class="generic-banner-content">
+						<h2 class="text-white">RECICLADO INTELIGENTE</h2>
+						<p class="text-white">Los mecanismos de inteligencia artificial permiten identificar objetos mediante fotografías. Una posible aplicación consiste en proporcionar a los ciudadanos ayudas para saber en qué cubo reciclar cada residuo.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+	<!-- About Generic Start -->
+	<div class="main-wrapper">
+
+		<!-- Start video-sec Area -->
+		<section class="pt-100 margin-bot">
+
+			<div class=" text-center">
+						
+				<button type="button" class="btn btn-primary btn-lg" title="camara" onclick="getMedia()">Open Camara</button>
+
+
+				<button type="button" class="btn btn-primary btn-lg" id="snap" onclick="takePhoto()">Get photo</button>
+
+				<!-- <form action="/identify" method="post" style="display: inline-block"> -->
+					<input type="text" id="check" name="check" value="check" style="display: none;"><br><br>
+					<input type="submit" value="Identify photo" class="btn btn-primary btn-lg" id="btnsavaImg" onClick="Download()">	
+				<!-- </form> -->
+						
+			</div>
+
+
+			<div class=" text-center">
+
+				  <div class="row align-items-start">
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+						<video  id="video" class="drawbackgound-color" width="640px" height="360px"></video>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 boxsize"></div>
+					
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+						<canvas id="canvas" class="drawbackgound-color" width="640px" height="360px"></canvas>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- End video-sec Area -->
+
+		<!-- Start Generic Area -->
+		<section class="section-gap" id="bin-info">
+			<div class="container text-center">
+
+				<div class="row align-items-start"></div>
+
+					<div class="col" id="info-img">
+						<img src="../static/upload/contenidor_marro.png" alt="">
+					</div>
+
+					<div class="col">
+
+						<div class="container text-center">
+
+							<h3 class="mb-30">CONTENEDOR MARRÓN - ORGÁNICAS</h3>
+
+							<div class="row">
+								<div class="col-md-12">
+									<i class="fa fa-check comment-simbol positive" aria-hidden="true"></i>
+									<span class="comment-title positive">Què s’hi pot llençar:</span>
+								</div>
+
+								<div class="col-lg-12">
+									<p class="comment-context" id="info-1">restos de carne, pescado, pan, fruta, verdura, marisco, cáscaras de huevo y de frutos secos, tapones de corcho, bolsas de infusión, marrón del café, papel de cocina y servilletas manchadas de aceite, restos de jardinería, etc.</p>
+								</div>
+
+								<div class="col-lg-12">
+									<i class="fa fa-times comment-simbol negative" aria-hidden="true"></i>
+									<span class="comment-title negative">Què no s’hi pot llençar:</span>
+								</div>
+
+								<div class="col-md-12">
+									<p class="comment-context" id="info-2">restos de barrer, pelo, pañales y heces de animales, que van al contenedor gris.</p>
+								</div>
+
+								<div class="col-md-12">
+									<p class="comment-context" id="info-3">Los residuos de origen vegetal y/o animal son susceptibles de degradarse biológicamente, como los restos de comida y jardinería. Es una fracción de residuos muy relevante, puesto que constituye la tercera parte de los residuos que generamos en nuestro hogar. Estos residuos se llevan a los ecoparques, donde se convierten en compost y biogás.</p>
+								</div>
+								
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+							
+			</div>
+			
+		
+		</section>
+	</div>
+		<!-- End Generic Start -->
+		
+		<script src="../static/js/index/index.js"></script>
+
+
+		<script src="../static/js/vendor/jquery-2.2.4.min.js"></script>
+		<script src="../static/js/vendor/bootstrap.min.js"></script>
+		<script src="../static/js/easing.min.js"></script>
+		<script src="../static/js/hoverIntent.js"></script>
+		<script src="../static/js/superfish.min.js"></script>
+		<script src="../static/js/jquery.ajaxchimp.min.js"></script>
+		<script src="../static/js/jquery.magnific-popup.min.js"></script>
+		<script src="../static/js/owl.carousel.min.js"></script>
+		<script src="../static/js/jquery.sticky.js"></script>
+		<script src="../static/js/jquery.nice-select.min.js"></script>
+		<script src="../static/js/parallax.min.js"></script>
+		<script src="../static/js/mail-script.js"></script>
+		<script src="../static/js/main.js"></script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+			
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+			
+</body>
+
+</html>

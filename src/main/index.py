@@ -35,6 +35,8 @@ def identify():
     # return flask.jsonify({'msg': 'success'})
     print(contenedor_value)
 
+    return jsonify({"result": contenedor_value, "perf": accuracy})
+
     if contenedor_value == "amarillo":
         print("test")
         return redirect("/groc")
@@ -50,7 +52,7 @@ def identify():
 
 @app.route("/groc")
 def groc():
-    return render_template("groc.html")
+    return render_template("index.html")
 
 
 @app.route("/blau")

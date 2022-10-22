@@ -1,8 +1,4 @@
 let video = document.getElementById("video");
-let type = "jpg";
-let result = Math.floor(Math.random() * 99999999);
-
-let filename = "img_" + new Date().getSeconds() + result + "." + type;
 
 function getMedia() {
   let contraints = {
@@ -28,6 +24,7 @@ function takePhoto() {
 }
 
 function Download() {
+  let type = "jpg";
   var imgdata = canvas.toDataURL(type);
 
   var fixtype = function (type) {
@@ -67,6 +64,10 @@ function Download() {
     save_link.dispatchEvent(event);
   };
 
+  let result = Math.floor(Math.random() * 99999999);
+
+  let filename = "img_" + new Date().getSeconds() + result + "." + type;
+
   savaFile(imgdata, filename);
 
   $.ajax({
@@ -78,6 +79,13 @@ function Download() {
 
     dataType: "json",
 
-    async: true,
+    success: function (data) {
+      console.log("success");
+      console.log(data);
+    },
+    error: function (error) {
+      console.log("error");
+      console.log(error);
+    },
   });
 }

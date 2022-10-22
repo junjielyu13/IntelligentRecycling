@@ -75,23 +75,25 @@ function Download() {
   function ajaxfunction(filename) {
     console.log(filename);
 
-    // $.ajax({
-    //   type: "POST",
-    //   url: "/identify",
+    $.ajax({
+      type: "POST",
+      url: "/identify",
 
-    //   data: JSON.stringify(filename),
+      contentType: "application/json; charset=utf-8",
 
-    //   dataType: "json",
+      data: JSON.stringify({ datafilename: filename }),
 
-    //   success: function (data) {
-    //     print("succss!");
-    //     print(data);
-    //   },
+      dataType: "json",
 
-    //   error: function (error) {
-    //     console.log(error);
-    //   },
-    // });
+      success: function (data) {
+        print("succss!");
+        print(data);
+      },
+
+      error: function (error) {
+        console.log(error);
+      },
+    });
   }
 
   ajaxfunction();

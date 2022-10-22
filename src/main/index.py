@@ -13,23 +13,13 @@ def index():
     return render_template("index.html")
 
 
-def classification_images(imag):
-    pass
-
-
 @app.route("/identify", methods=['POST'])
 def indexhome(): 
 
-    # data = request.get_json()
-    # print(data)
-
-    # check = request.form.get('check')
 
 
-    json = {"status": "400",
-            "msg":"success"}
-
-    return "hello world"
-    return json.dumps(json)
+    #return "hello world"
+    # return flask.jsonify({'msg': 'success'})
+    return render_template("index.html")
 
 

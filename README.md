@@ -21,7 +21,7 @@ There that there are always people who throws the wastes in the wrong trash bin,
 Download the Python 3 and Run the following in the terminal to install the required python packages
 
 ```
-python3 pip install pip install --no-cache-dir -r requirements.txt
+python3 pip install --no-cache-dir -r requirements.txt
 ```
 
 Download the source code from the repository and run in the terminal the file.

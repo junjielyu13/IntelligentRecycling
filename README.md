@@ -16,7 +16,7 @@ There that there are always people who throws the wastes in the wrong trash bin,
 
 </divs>
 
-## Running the application
+## Usage
 
 Download the Python 3 and Run the following in the terminal to install the required python packages
 
@@ -32,11 +32,13 @@ flask app run
 
 Then you can identify wastes through our website
 
-## Video Source:
+## Video
 
-[Youtube Video](https://www.youtube.com/watch?v=6UeTWyYHZlQ)
+[![image](./demo/video.png)](https://www.youtube.com/watch?v=6UeTWyYHZlQ)
 
-## Screenshots
+> Click ↑:
+
+## Example
 
 ### Cover:
 
@@ -52,8 +54,16 @@ Then you can identify wastes through our website
 
 ### ![Example_2](./demo/example_2.jpg)
 
-## Description of bin
+### Description of bin
 
 ![Full screen](./demo/fullscreen.jpg)
 
 ---
+
+## Contributors
+
+Authors: [@ChenghengLi](https://github.com/ChenghengLi), [@Junjie_Li](https://github.com/junjielyu13), [@Zhipeng139](https://github.com/Zhipeng139), [@ZhehanX](https://github.com/ZhehanX), [@xuyaooo](https://github.com/xuyaooo), [@BlueJK](https://github.com/BlueJK)
+
+## License
+
+Apache-2.0 ©ALL CONTRIBUTORS
